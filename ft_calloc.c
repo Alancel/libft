@@ -6,12 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:49:13 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 17:48:33 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:13:54 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void    *ft_calloc(size_t count, size_t size)
 {

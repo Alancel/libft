@@ -6,12 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:40:22 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 17:50:06 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:15:09 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char    *ft_strdup(const char *str)
 {

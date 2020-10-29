@@ -6,21 +6,21 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:23:07 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 15:34:47 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:54:38 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int ft_strncmp(const char *str1, const char *str2, size_t num)
 {
     size_t i;
-    i = 0;
     
+    i = 0;
     while ((str1[i] || str2[i]) && num--)
     {
         if  (str1[i] != str2[i])
-            return (str1[i] - str2[i]);
+            return ((unsigned char)str1[i] - (unsigned char)str2[i]);
         i++;
     }
     return (0);

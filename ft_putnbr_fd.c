@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 17:38:15 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/29 19:58:55 by alancel          ###   ########.fr       */
+/*   Created: 2020/10/29 22:34:19 by alancel           #+#    #+#             */
+/*   Updated: 2020/10/29 22:45:55 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+void ft_putnbr_fd(int n, int fd)
 {
-    size_t i;
+    long int	tmp;
 
-    i = 0;
-    if(!dst || !src)
-        return (0);
-    if (size == 0)
-        return ft_strlen(src);
-    while(src[i] != '\0' && i < size - 1)
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    dst[i] = '\0';
-    return (ft_strlen(src));
+	tmp = n;
+	if (tmp == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return;
+	}
+	if (tmp < 0)
+	{
+		ft_putchar_fd('-', fd);
+		tmp = -tmp;
+	}
+	if (tmp >= 10)
+	{
+        ft_putnbr_fd(tmp / 10, fd);
+	    ft_putnbr_fd(tmp % 10, fd);
+	}
+    else
+	    ft_putchar_fd(tmp + '0', fd);
 }

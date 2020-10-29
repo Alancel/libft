@@ -6,11 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:38:14 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 17:19:46 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:49:49 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 const char *ft_strrchr(const char *str, int sym)
 {
@@ -20,9 +20,8 @@ const char *ft_strrchr(const char *str, int sym)
         tmp++;
     while (tmp >= str)
     {
-        if (*tmp == sym)
-            return ((char *) tmp);
-        tmp--;    
+        if (*tmp-- == (char)sym)
+            return ((char *) tmp + 1);   
     }
     return (NULL);
     

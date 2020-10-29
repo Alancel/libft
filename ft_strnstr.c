@@ -6,11 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 15:40:00 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 16:25:44 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 20:04:20 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char    *ft_strnstr(const char *str1, const char *str2, size_t len)
 {
@@ -27,8 +27,8 @@ char    *ft_strnstr(const char *str1, const char *str2, size_t len)
         {
             while (str2[j]!= '\0' && str1[i+j] == str2[j] && i + j < len)
             {
-				if(str2[i] == '\0')
-					return ((char *)str1 + i);
+				if(str2[j + 1] == '\0')
+					return ((char *)&str1[i]);
 				j++;
             }
         }

@@ -6,17 +6,13 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 19:45:13 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 19:48:33 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:25:29 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
 void ft_bzero(void * str , size_t  n )
 {
-    size_t i;
-
-    i = 0;
-    while(n--)
-        ((unsigned char *)str)[i] = '\0';
+    ft_memset(str, 0, n);
 }

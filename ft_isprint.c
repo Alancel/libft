@@ -6,9 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:48:20 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 13:57:59 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:14:31 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int     ft_isprint(int sym)
 {

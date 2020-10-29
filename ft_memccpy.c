@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 17:38:15 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/29 19:58:55 by alancel          ###   ########.fr       */
+/*   Created: 2020/10/28 19:39:01 by alancel           #+#    #+#             */
+/*   Updated: 2020/10/29 19:14:35 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
     size_t i;
 
     i = 0;
-    if(!dst || !src)
-        return (0);
-    if (size == 0)
-        return ft_strlen(src);
-    while(src[i] != '\0' && i < size - 1)
+    if (!dest && !src)
+        return(NULL);
+    while(n)
     {
-        dst[i] = src[i];
-        i++;
-    }
-    dst[i] = '\0';
-    return (ft_strlen(src));
+        ((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+        if (((unsigned char*)src)[i] == (unsigned char)c)
+		{
+			return ((unsigned char*)dest + i + 1);
+		}
+		i++;
+		n--;
+	}
+	return (NULL);
 }

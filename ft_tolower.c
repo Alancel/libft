@@ -6,9 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:32:00 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 13:46:28 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:15:36 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int     ft_tolower(int sym)
 {

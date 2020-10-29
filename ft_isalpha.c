@@ -6,9 +6,11 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:10:59 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 16:02:29 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:14:17 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int     ft_isalpha(int sym)
 {

@@ -6,11 +6,13 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:09:01 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 14:10:33 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:29:10 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int     ft_isdigit(int sym)
 {
-    return (sym >= 0 && sym <= 9);
+    return (sym >= '0' && sym <= '9');
 }

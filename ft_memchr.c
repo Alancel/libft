@@ -6,13 +6,13 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:21:56 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/28 18:27:46 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/29 19:14:41 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void *memchr (const void *arr, int c, size_t n)
+void *ft_memchr (const void *arr, int c, size_t n)
 {
     unsigned char *str;
     str = (unsigned char *) arr;
