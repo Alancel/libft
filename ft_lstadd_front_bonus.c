@@ -6,7 +6,7 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 21:23:51 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/30 21:32:47 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/30 23:07:48 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(lst && new)
+	if (lst && new)
 	{
 		new->next = *lst;
 		*lst = new;

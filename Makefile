@@ -6,7 +6,7 @@
 #    By: alancel <alancel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 19:22:08 by alancel           #+#    #+#              #
-#    Updated: 2020/10/30 22:21:27 by alancel          ###   ########.fr        #
+#    Updated: 2020/10/30 22:58:01 by alancel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,8 @@ SRC		=	ft_isprint.c \
 			ft_lstlast_bonus.c\
 			ft_lstadd_back_bonus.c\
 			ft_lstdelone_bonus.c\
+			ft_lstclear_bonus.c\
+			ft_lstiter_bonus.c\
 	
 
 OBJS	=	$(SRC:.c=.o)
