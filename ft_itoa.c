@@ -6,7 +6,7 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 21:07:44 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/29 22:26:55 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/30 20:02:46 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char				*ft_itoa(int n)
 	length = ft_length(n) - 1;
 	if ((str = ft_check(n)))
 		return (str);
-	if(!(str = (char*)ft_calloc(length + 2, sizeof(char))))
+	if (!(str = (char*)ft_calloc(length + 2, sizeof(char))))
 		return (NULL);
 	if (n == 0)
 		str[0] = '0';

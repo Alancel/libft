@@ -6,7 +6,7 @@
 #    By: alancel <alancel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 19:22:08 by alancel           #+#    #+#              #
-#    Updated: 2020/10/29 22:49:23 by alancel          ###   ########.fr        #
+#    Updated: 2020/10/30 22:21:27 by alancel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,16 @@ SRC		=	ft_isprint.c \
 			ft_putnbr_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
+			ft_strmapi.c\
+			ft_strtrim.c\
+			ft_split.c\
+			ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
+			ft_lstlast_bonus.c\
+			ft_lstadd_back_bonus.c\
+			ft_lstdelone_bonus.c\
+	
 
 OBJS	=	$(SRC:.c=.o)
 

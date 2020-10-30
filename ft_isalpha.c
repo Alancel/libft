@@ -6,13 +6,13 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:10:59 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/29 19:14:17 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/30 20:00:30 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isalpha(int sym)
+int		ft_isalpha(int sym)
 {
-    return((sym >= 'A' && sym <= 'Z') || (sym >= 'a' && sym <= 'z'));
+	return ((sym >= 'A' && sym <= 'Z') || (sym >= 'a' && sym <= 'z'));
 }

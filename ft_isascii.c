@@ -6,13 +6,13 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:48:20 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/29 19:14:24 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/30 20:01:10 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isascii(int sym)
+int		ft_isascii(int sym)
 {
-    return(sym >= 0 && sym <= 127);
+	return (sym >= 0 && sym <= 127);
 }

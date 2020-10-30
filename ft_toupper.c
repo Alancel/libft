@@ -6,15 +6,15 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:47:24 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/29 19:29:58 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/30 20:49:41 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_toupper(int sym)
+int		ft_toupper(int sym)
 {
-    if(sym >= 'a' && sym <= 'z')
-        sym -= 32;
-    return sym;
+	if (sym >= 'a' && sym <= 'z')
+		sym -= 32;
+	return (sym);
 }
