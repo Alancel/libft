@@ -6,7 +6,7 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 15:17:03 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/30 20:29:12 by alancel          ###   ########.fr       */
+/*   Updated: 2020/10/31 23:57:45 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 	size_t	i;
 
-	if (!s || !(str = malloc(ft_word_amount(s, c) * sizeof(char *) + 1)))
+	if (!s || !(str = ft_calloc(ft_word_amount(s, c) + 1, sizeof(char **))))
 		return (NULL);
 	i = 0;
 	while (*s)

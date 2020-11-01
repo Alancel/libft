@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/29 16:40:22 by alancel           #+#    #+#             */
-/*   Updated: 2020/11/01 19:14:41 by alancel          ###   ########.fr       */
+/*   Created: 2020/10/30 22:59:57 by alancel           #+#    #+#             */
+/*   Updated: 2020/10/31 23:45:08 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*str_copy;
-	size_t	i;
+	t_list	*list;
+	t_list	*tmp;
 
-	i = 0;
-	if (!(str_copy = malloc(sizeof(char) * ft_strlen(str) + 1)))
+	list = NULL;
+	if (!lst)
 		return (NULL);
-	while (str[i])
+	while (lst)
 	{
-		str_copy[i] = str[i];
-		i++;
+		tmp = ft_lstnew((*f)(lst->content));
+		if (!tmp)
+		{
+			ft_lstclear(&list, del);
+			return (0);
+		}
+		ft_lstadd_back(&list, tmp);
+		lst = lst->next;
 	}
-	str_copy[i] = '\0';
-	return (str_copy);
+	return (list);
 }

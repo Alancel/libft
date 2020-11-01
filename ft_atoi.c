@@ -6,7 +6,7 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:13:31 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/30 19:56:26 by alancel          ###   ########.fr       */
+/*   Updated: 2020/11/01 18:53:57 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int sign;
-	int i;
-	int res;
+	int				sign;
+	int				i;
+	unsigned long	res;
 
 	sign = 1;
 	i = 0;
@@ -33,6 +33,10 @@ int		ft_atoi(const char *str)
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
+		if (sign < 0 && res > 9223372036854775807)
+			return (0);
+		if (sign > 0 && res > 9223372036854775807)
+			return (-1);
 	}
 	return (res * sign);
 }
