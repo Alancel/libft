@@ -6,15 +6,15 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 21:07:44 by alancel           #+#    #+#             */
-/*   Updated: 2020/11/01 18:58:08 by alancel          ###   ########.fr       */
+/*   Updated: 2020/11/04 16:52:01 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					ft_length(int n)
+static	int					ft_length(int n)
 {
-	int				i;
+	int						i;
 
 	i = 0;
 	if (n == 0)
@@ -32,15 +32,15 @@ int					ft_length(int n)
 	return (i);
 }
 
-char				ft_putnbr(int n)
+static	char				ft_putnbr(int n)
 {
 	return ((n % 10) + '0');
 }
 
-void				*ft_check(int n)
+static	void				*ft_check(int n)
 {
-	unsigned int	tmp;
-	char			*str;
+	unsigned int			tmp;
+	char					*str;
 
 	tmp = n;
 	if (n < 0)
@@ -56,10 +56,10 @@ void				*ft_check(int n)
 	return (NULL);
 }
 
-char				*ft_itoa(int n)
+char						*ft_itoa(int n)
 {
-	char			*str;
-	int				length;
+	char					*str;
+	int						length;
 
 	length = ft_length(n) - 1;
 	if ((str = ft_check(n)))

@@ -6,13 +6,13 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:38:14 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/30 20:44:00 by alancel          ###   ########.fr       */
+/*   Updated: 2020/11/02 13:12:24 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-const char	*ft_strrchr(const char *str, int sym)
+char	*ft_strrchr(const char *str, int sym)
 {
 	const char	*tmp;
 

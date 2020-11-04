@@ -6,7 +6,7 @@
 #    By: alancel <alancel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 19:22:08 by alancel           #+#    #+#              #
-#    Updated: 2020/10/31 23:48:56 by alancel          ###   ########.fr        #
+#    Updated: 2020/11/02 13:42:09 by alancel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,15 @@ SRC			=	ft_isprint.c \
 				ft_strmapi.c\
 				ft_strtrim.c\
 				ft_split.c\
+				ft_lstnew.c\
+				ft_lstadd_front.c\
+				ft_lstsize.c\
+				ft_lstlast.c\
+				ft_lstadd_back.c\
+				ft_lstdelone.c\
+				ft_lstclear.c\
+				ft_lstiter.c\
+				ft_lstmap.c\
 			
 	
 
@@ -65,19 +74,22 @@ BONUS_OBJS	=	$(BONUS:.c=.o)
 
 RM			=	rm -f
 
-CFLAGS		=	-g -fsanitize=address -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror
 
 all:	$(NAME)
 
-$(NAME)	:
-		gcc $(CFLAGS) -c $(SRC) libft.h
-		ar rc $(NAME) $(OBJS)
-		ranlib $(NAME)
+%.o : %.c
+		gcc $(CFLAGS) -c $< -o $@
 
+$(NAME)	: $(OBJS)
+		ar rc $(NAME) $^
+		ranlib $(NAME)
+		
 bonus	:
 		gcc $(CFLAGS) -c $(BONUS)
 		ar rc $(NAME) $(BONUS_OBJS)
 		ranlib $(NAME)
+		
 	
 clean	:
 	$(RM) $(OBJS) $(BONUS_OBJS)

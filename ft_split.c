@@ -6,11 +6,12 @@
 /*   By: alancel <alancel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 15:17:03 by alancel           #+#    #+#             */
-/*   Updated: 2020/10/31 23:57:45 by alancel          ###   ########.fr       */
+/*   Updated: 2020/11/04 18:21:29 by alancel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_wlength(char const *s, char c)
 {
@@ -48,7 +49,7 @@ char	*ft_word_insert(char const *s, char c)
 	size_t	i;
 	char	*str;
 
-	if (!(str = malloc(ft_wlength(s, c) * sizeof(char *) + 1)))
+	if (!(str = ft_calloc(ft_wlength(s, c) + 1, sizeof(char))))
 		return (NULL);
 	i = 0;
 	while (*s && *s != c)
